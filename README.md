@@ -1,72 +1,76 @@
-[![Shipping files](https://github.com/neuefische/ds-dimensionality-reduction/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-dimensionality-reduction/actions/workflows/workflow-02.yml)
-
 # Dimensionality Reduction
 
-In this repo we will have a look at dimensionality reduction.
+In this repository, we explore various techniques for dimensionality reduction using Jupyter Notebooks.
 
-## Task
+## Requirements
 
-Please work in pairs through all the notebooks in this particular order:
+To run this project, you will need:
 
-1. [Principal Component Analysis](1_Principal_Component_Analysis.ipynb)
-2. [t-SNE](2_t_SNE.ipynb)
-3. [PCA_in_Pipeline and SVM](3_PCA_in_Pipeline.ipynb)
+- Python 3.11.3 (managed by pyenv)
+- jupyterlab==3.6.3
+- matplotlib==3.7.1
+- seaborn==0.12.2
+- numpy==1.24.3
+- pandas==2.0.1
+- scikit-learn==1.2.2
 
-In the first notebook you will see a short hands-on introduction to the principal component analysis using a sample dataset. In the solution branch you will find one solution how the first notebook could look like. In the second notebook you will find an introduction to a second dimensionality reduction algorithm: t-Distributed Stochastic Neighbor Embedding (t-SNE). And in the third notebook is a little throwback to the Support Vector Machines with an implementation of the PCA.
+## Installation
 
-## Set up your Environment
+### macOS
 
+To set up your environment on macOS, run:
 
+```bash
+make setup
+```
 
-### **`macOS`** type the following commands : 
+After running the `setup` command, activate the virtual environment with:
 
-- For installing the virtual environment you can either use the [Makefile](Makefile) and run `make setup` or install it manually with the following commands:
+```bash
+source .venv/bin/activate
+```
 
-     ```BASH
-    make setup
-    ```
-    After that active your environment by following commands:
-  
-    ```BASH
-    source .venv/bin/activate
-    ```
-Or ....
-- Install the virtual environment and the required packages by following commands:
+### WindowsOS
 
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
-    
-### **`WindowsOS`** type the following commands :
+For WindowsOS, you can set up your environment using PowerShell or Git-bash. Follow these steps for both:
 
-- Install the virtual environment and the required packages by following commands.
+**PowerShell:**
 
-   For `PowerShell` CLI :
+```powershell
+pyenv local 3.11.3
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-    ```PowerShell
-    pyenv local 3.11.3
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+**Git-bash:**
 
-    For `Git-bash` CLI :
-  
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/Scripts/activate
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-    **`Note:`**
-    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
-    ```Bash
-    python.exe -m pip install --upgrade pip
-    ```
+If you encounter an error when running `pip install --upgrade pip`, try using:
+
+```bash
+python.exe -m pip install --upgrade pip
+```
+
+## Usage
+
+To run the project, follow these steps:
+
+1. Activate your virtual environment (if not already activated).
+2. Open any of the Jupyter Notebooks in this repository.
+
+For example, to open `1_Principal_Component_Analysis.ipynb`, you can use:
+
+```bash
+jupyter lab 1_Principal_Component_Analysis.ipynb
+```
+
+This will launch JupyterLab and open the specified notebook for you to explore.
